@@ -39,14 +39,15 @@ var menu_state = {
   },
 
   blink: function() {
-    if (this.menu_label.content != "") {
+    if (this.menu_label.content !== "") {
       this.menu_label.content = "";
     }
     else {
       this.menu_label.content = "Press Space to Jump";
     }
   }
-}
+};
+
 var main_state = {
   create: function() {
     game.add.sprite(0, 0, 'background-large');
@@ -70,7 +71,7 @@ var main_state = {
     this.crashable.add(this.grounds);
 
     this.bird = game.add.sprite(100, game.world.height/2, 'bird');
-    this.bird.body.gravity.y = 1600;
+    this.bird.body.gravity.y = 1500;
     this.bird.anchor.setTo(-0.2, 0.5);
 
     var space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
